@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header/Header'
+// import Header from '../components/Header/Header'
 import Card from '../components/Card/Card'
 import { cardArray } from './Json'
 import { sideArray } from './Json'
@@ -7,20 +7,9 @@ import ContentSide from '../components/Content Side/ContentSide'
 const Home = () => {
     return (
         <>
-            <Header />
+            
             <div>
-                <section className="search">
-                    <div className="container">
-                        <div className="search_box">
-                            <input type="text" />
-                            <button className="btn btn_advertisement search_btn">
-
-                                <img className="search_btn_icon" src="./images/search.svg" alt="search" />
-                                <span className="search_btn_text">Search</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
+               
 
                 <div className="content">
                     <div className="container">
@@ -33,6 +22,7 @@ const Home = () => {
                                             cardArray.map(card => (
                                                 <Card
                                                     key={card.id}
+                                                    id={card.id}
                                                     title={card.title}
                                                     price={card.price}
                                                     address={card.address}
@@ -68,8 +58,8 @@ const Home = () => {
                                     </div>
                                     <div className="content_side_footer">
                                         <p className="content_side_footer_item">© ООО «Abito», 2011–2021</p>
-                                        <a href="#!" className="content_side_footer_item">Privacy Policy</a>
-                                        <a href="#!" className="content_side_footer_item">Data processing</a>
+                                        <div className="content_side_footer_item">Privacy Policy</div>
+                                        <div className="content_side_footer_item">Data processing</div>
                                     </div>
                                 </div>
                             </div>
